@@ -1,0 +1,13 @@
+#!/bin/bash
+#author:constance
+echo "what username would you want to create"
+read username
+echo"please, can i have the name of the group"
+read group
+echo "creating a group"
+useradd $username
+groupadd $group
+usermod -aG $username
+echo "please enter the new password for user $username"
+sleep 3
+password $username
